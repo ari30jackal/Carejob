@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.carefast.fragment.DeskripsiDetailFragment">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <io.github.kexanie.library.MathView
+        android:id="@+id/desc_advertisement"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="40dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="top"
+        app:engine="MathJax"
+        />
+
+</androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

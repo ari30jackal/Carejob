@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.carefast.register.ListProvince">
+
+    <RelativeLayout
+        android:id="@+id/barisatu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        >
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_backarrow"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="title"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/defaultfont"
+            android:layout_centerInParent="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+
+            android:textSize="20sp"
+            android:id="@+id/submitrincianalamat"
+android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/birubutton"
+
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/barisatu"
+        android:id="@+id/barisdua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:layout_marginStart="10dp"
+        android:text="Nama Jalan,Gedung, No Rumah/Unit"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/barisdua"
+    android:layout_marginHorizontal="10dp"
+    android:orientation="horizontal"
+    android:weightSum="10">
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLength="150"
+        android:text=""
+        android:textColor="@color/black"
+        android:layout_weight="9.5"
+        android:hint="mohon isi rincian alamat anda"
+        android:id="@+id/ketikdetil"/>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/del"
+        android:background="@drawable/del"
+        android:layout_gravity="center_vertical"
+        android:foregroundGravity="center_vertical"/>
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

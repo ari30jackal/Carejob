@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/card"
+
+    android:layout_marginHorizontal="10dp"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/roundedpurple"
+
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<ImageView
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    android:id="@+id/iv_icon"
+    android:background="@drawable/ic_image2"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="7"
+            >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:text="Jabatan"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:fontFamily="@font/poppins"
+    android:textSize="14sp"
+    android:id="@+id/tv_jabatan"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Placement"
+                android:textColor="@color/white"
+
+                android:fontFamily="@font/poppins"
+                android:textSize="12sp"
+                android:id="@+id/tv_placement"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="10sp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins"
+            android:text="#kd"
+            android:id="@+id/tv_kodelowongan"/>
+
+
+    </LinearLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:layout_marginEnd="10dp"
+    android:textSize="12sp"
+    android:textColor="@color/white"
+    android:text="periode"
+    android:textAlignment="textEnd"
+    android:id="@+id/tv_periode"
+    android:layout_marginBottom="40dp"/>
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

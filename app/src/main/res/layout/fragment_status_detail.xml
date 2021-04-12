@@ -1,0 +1,364 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.carefast.fragment.StatusDetailFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_statuslamaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:background="#D7E0FF"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:text=" "
+                android:textColor="#0030DF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/iv_iconstatuslamaran"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_image3" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_jabatan"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text=" "
+                        android:textColor="@color/defaultfont"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_placementkerja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+                        android:text=" "
+
+                        android:textColor="@color/defaultfont"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_kodelowongan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text=" "
+                        android:textAlignment="textEnd"
+
+                        android:textColor="@color/defaultfont"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_periode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="judul"
+                        android:textAlignment="textEnd"
+android:visibility="gone"
+                        android:textColor="@color/defaultfont"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_ulasan"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Ulasan :"
+                    android:textColor="@color/defaultfont"
+                    android:textSize="20sp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_ulasan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/poppins"
+                    android:maxLines="2"
+                    android:text="Sedang Diproses"
+                    android:textColor="@color/defaultfont"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="Jadwal Interview :"
+                android:visibility="gone"
+                android:id="@+id/teksjuduljadwal"
+                android:textColor="@color/defaultfont"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_konfirmasi"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical"
+                android:weightSum="8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.6"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="2.5"
+                        android:fontFamily="@font/poppins"
+                        android:text=" "
+                        android:textColor="@color/defaultfont"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_hour"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:fontFamily="@font/poppins"
+                        android:text=" "
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/defaultfont"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5.8"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+
+                        android:background="@drawable/ic_image3" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+
+                        android:layout_weight="3.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvjabataninterview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text=" "
+
+
+                            android:textColor="@color/defaultfont"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tvlocationinterview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text=" "
+                            android:textColor="@color/defaultfont"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvinterviewer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:layout_marginStart="10dp"
+
+                            android:text=" "
+
+                            android:textColor="@color/defaultfont"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvkodelowinterview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_weight="1.5"
+                        android:text=" "
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/defaultfont"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_bataskonfirmasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/poppins"
+                        android:text=" "
+                        android:textColor="@color/defaultfont"
+                        android:textSize="12dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="horizontal"
+    android:weightSum="5">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.9"/>
+                    <Button
+                        android:id="@+id/btn_konfirmasikehadiran"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/birubutton"
+                        android:text="Iya"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"/>
+                    <Button
+                        android:id="@+id/btn_tolakkehadiran"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        android:background="#E76A6B"
+                        android:text="Tidak"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+</LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:text="Perbaiki Data Lamaran"
+                android:background="#16AA9D"
+                android:visibility="gone"
+                android:id="@+id/btn_perbaikidata"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:text="Batalkan Proses Lamar"
+                android:visibility="gone"
+                android:background="#E76A6B"
+                android:id="@+id/btn_batallamar"/>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

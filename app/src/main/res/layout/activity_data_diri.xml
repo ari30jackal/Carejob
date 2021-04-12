@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.carefast.detailjob.DetailJobActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_backarrow" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:text="Data Diri"
+                android:textColor="@color/defaultfont"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_nik"
+                android:focusable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Induk Kependudukan"
+                android:maxLines="1"
+                android:editable="false"
+                android:clickable="false"
+
+                android:textColor="@color/defaultfont"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_tempat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:hint="Tempat"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:textColor="@color/defaultfont"
+                    android:fontFamily="@font/poppins"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1" />
+
+                <EditText
+                    android:id="@+id/et_tanggallahir"
+                    android:layout_width="0dp"
+                    android:clickable="false"
+android:focusable="false"
+                    android:editable="false"
+                    android:textColor="@color/defaultfont"
+                    android:fontFamily="@font/poppins"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:drawableEnd="@drawable/ic_kalender"
+                    android:hint="Tangal Lahir"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:fontFamily="@font/poppins"
+                    android:text="jenis kelamin"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/opsipria"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+
+                    android:background="@drawable/priaactive" />
+
+                <ImageView
+                    android:id="@+id/opsiwanita"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/wanitaactive" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/defaultfont"
+                    android:text="Tinggi Badan"/>
+
+<!--                <ImageView-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:id="@+id/btn_minustinggi"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:background="@drawable/ic_minus"/>-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="30dp"
+                        android:textAlignment="center"
+                        android:text="150"
+                        android:id="@+id/tinggi"
+                        android:layout_marginStart="40dp"
+                        android:textColor="@color/defaultfont"
+                        android:fontFamily="@font/poppins"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="30dp"
+                        android:textAlignment="center"
+                        android:text="cm"
+                        android:textColor="@color/defaultfont"
+                        android:fontFamily="@font/poppins"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+<!--                <ImageView-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:id="@+id/btn_plustinggi"-->
+<!--                    android:background="@drawable/ic_plus"/>-->
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/defaultfont"
+                    android:layout_height="wrap_content"
+                    android:text="Berat Badan"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/btn_minusberat"
+
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/ic_minus"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="30dp"
+                        android:textColor="@color/defaultfont"
+                        android:fontFamily="@font/poppins" android:textAlignment="center"
+                        android:text="57"
+                        android:id="@+id/berat"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="30dp"
+                        android:textColor="@color/defaultfont"
+                        android:fontFamily="@font/poppins" android:textAlignment="center"
+                        android:text="kg"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/btn_plusberat"
+                    android:background="@drawable/ic_plus"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/defaultfont"
+                android:text="Alamat Tempat Tinggal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/rlprovince"
+                android:background="@drawable/whiteroundedshadow_linear">
+
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:background="@drawable/ic_arrowright"-->
+                <!--                    android:scaleType="center" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/defaultfont"
+                    android:id="@+id/tv_provinsi_show"
+                    android:fontFamily="@font/poppins"
+                    android:text="Provinsi" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/hijaubutton"
+                    android:text="Ubah" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/rlcity"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/whiteroundedshadow_linear">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/defaultfont"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_city_show"
+                    android:text="Kota / Kabupaten" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/hijaubutton"
+                    android:text="Ubah" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/rlkecamatan"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/whiteroundedshadow_linear">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/defaultfont"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_kecamatan_show"
+                    android:text="Kecamatan" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/hijaubutton"
+                    android:text="Ubah" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/rl_postcode"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/whiteroundedshadow_linear">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_postcode_show"
+                    android:textColor="@color/defaultfont"
+                    android:text="Kode Pos" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/hijaubutton"
+                    android:text="Ubah" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/rldetilalamat"
+                android:background="@drawable/whiteroundedshadow_linear">
+
+
+                <TextView
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"     android:textColor="@color/defaultfont"
+
+                    android:id="@+id/tv_detil_alamat"
+                    android:layout_marginLeft="5dp"
+                    android:text="Rincian Alamat" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/hijaubutton"
+                    android:text="Ubah" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="foto selfie Anda  dengan E-KTP"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/defaultfont"
+                android:fontFamily="@font/poppins"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:elevation="200dp"
+                android:translationZ="5dp"
+                android:background="@drawable/whiteroundedshadow_linear"
+                android:layout_height="150dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="200dp"
+                    android:id="@+id/takepict"
+                    android:translationZ="5dp"
+                    android:background="@drawable/whiteroundedshadow_linear">
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                       android:background="@color/gray"
+                        android:id="@+id/hasilfoto"/>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="100dp"
+            android:layout_marginHorizontal="20dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Simpan"
+                android:id="@+id/btn_save"
+                android:background="@color/hijaubutton"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

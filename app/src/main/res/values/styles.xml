@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+
+        <item name="android:popupBackground">#DFFFFFFF</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:buttonStyle">@style/test</item>
+    </style>
+
+    <style name="test" >
+        <item name="android:background">@drawable/roundorange</item>
+    </style>
+
+
+</resources>

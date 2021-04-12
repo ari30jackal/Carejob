@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="7">
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/fixcarefast"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="3.2"
+                android:fontFamily="@font/poppins"
+                android:text="Pendidikan"
+                android:textColor="@color/defaultfont"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/tv_page"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/poppins"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="@color/defaultorange"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/poppins"
+                android:text="/5"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/whiteroundedshadow_linear">
+
+
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:background="@drawable/ic_arrowright"-->
+                <!--                    android:scaleType="center" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tekspendidikan"
+                    android:fontFamily="@font/poppins"
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Pendidikan Terakhir" />
+                <Spinner
+                    android:id="@+id/spinnerpendidikan"
+                    android:layout_below="@id/tekspendidikan"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:autofillHints="pendidikan terakhir"
+                    android:layout_height="match_parent"
+
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Unggah foto lampiran pendukung pendidikan terakhir"
+                android:textSize="12sp"
+                android:layout_marginTop="30dp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlpendidikan"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:clipToPadding="false"
+                android:background="@drawable/whiteroundedshadow_linear"
+               >
+
+                <ImageView
+                    android:id="@+id/camera2"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_upload" />
+
+                <TextView
+                    android:id="@+id/teks3"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/camera2"
+                    android:layout_centerHorizontal="true"
+                    android:text="Unggah Dokumen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_below="@id/teks3"
+                    android:layout_centerHorizontal="true"
+                    android:text="(maks 10 mb .jpg/.pdf)"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="20dp"
+                android:weightSum="5">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2.2"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/whiteroundedshadow_linear">
+
+                    <Spinner
+android:id="@+id/spinnerlastposition"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins"
+                        android:layout_below="@+id/tekslastjob"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <!--                <ImageView-->
+                    <!--                    android:layout_width="20dp"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:background="@drawable/ic_arrowright"-->
+                    <!--                    android:scaleType="center" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                      android:id="@+id/tekslastjob"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginLeft="5dp"
+                        android:text="Pekerjaan Terakhir" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2.7"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/whiteroundedshadow_linear">
+
+                    <Spinner
+android:id="@+id/spinnerpengalaman"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tekstotaljob"
+
+                        />
+
+                    <!--                <ImageView-->
+                    <!--                    android:layout_width="20dp"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:background="@drawable/ic_arrowright"-->
+                    <!--                    android:scaleType="center" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                       android:id="@+id/tekstotaljob"
+                        android:layout_marginLeft="5dp"
+                        android:text="Total Pengalaman Kerja" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Unggah foto lampiran pendukung jabatan terakhir"
+                android:textSize="12sp"
+                android:layout_marginTop="30dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/rljabatan"
+                android:layout_height="150dp"
+                android:background="@drawable/whiteroundedshadow_linear"
+                android:clipToPadding="false"
+                android:elevation="55dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_upload"
+                    android:id="@+id/camera"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/teks2"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:text="Unggah Dokumen"
+                    android:layout_below="@id/camera"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="(maks 10 mb .jpg/.pdf)"
+                    android:layout_below="@id/teks2"
+                    android:textSize="10sp"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            >
+            <ImageView
+                android:id="@+id/btn_kembali"
+                android:background="@drawable/btnkembali"
+                android:layout_width="150dp"
+                android:layout_height="45dp"/>
+
+
+
+
+            <ImageView
+                android:id="@+id/btn_lanjutkan"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btnlanjutkan"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/fixcarefast"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="3.2"
+                android:fontFamily="@font/poppins"
+                android:text="Pilih Posisi Jabatan"
+                android:textColor="@color/defaultfont"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/tv_page"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/poppins"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="@color/defaultorange"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/poppins"
+                android:text="/5"
+                android:textSize="14sp" />
+        </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.2"
+    android:fontFamily="@font/poppins"
+    android:layout_marginHorizontal="20dp"
+    android:textSize="14sp"
+    android:textColor="@color/defaultfont"
+    android:text="Anda dapat pilih lebih dari satu jabatan"/>
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:id="@+id/rv_position"
+    android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            >
+            <ImageView
+                android:id="@+id/btn_kembali"
+                android:background="@drawable/btnkembali"
+                android:layout_width="150dp"
+                android:layout_height="45dp"/>
+
+
+
+
+            <ImageView
+                android:id="@+id/btn_lanjutkan"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btnlanjutkan"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

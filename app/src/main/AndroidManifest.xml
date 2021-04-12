@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.carefast.Login">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Base">
+        <activity android:name=".ForgetPassActivity"></activity>
+        <activity android:name="com.carefast.activity.SearchResultActivity" />
+        <activity android:name="com.carefast.activity.LowkerQrActivity" />
+        <activity android:name="com.carefast.register.VerifActivity" />
+        <activity
+            android:name="com.carefast.qr.HadirInterview"
+            android:parentActivityName="com.carefast.home.HomeeActivity" />
+        <activity
+            android:name="com.carefast.qr.QRActivity"
+            android:parentActivityName="com.carefast.home.HomeeActivity" />
+        <activity android:name="com.carefast.menuprofile.UbahSandiActivity" />
+        <activity android:name="com.carefast.menuprofile.KeamananAkunActivity" />
+        <activity android:name="com.carefast.menuprofile.KelengkapanActivity" />
+        <activity android:name="com.carefast.menuprofile.PengalamanActivity" />
+        <activity android:name="com.carefast.menuprofile.DataDiriActivity" />
+        <activity android:name="com.carefast.menuprofile.akunsaya.ChangePhoneActivity" />
+        <activity android:name="com.carefast.menuprofile.akunsaya.ChangeEmailActivity" />
+        <activity android:name="com.carefast.menuprofile.akunsaya.ChangeNamaActivity" />
+        <activity android:name="com.carefast.menuprofile.AkunSayaActivity" />
+        <activity android:name="com.carefast.activity.StatusLamaranActivity" />
+        <activity android:name="com.carefast.activity.JadwalInterviewActivity" /> <!-- <activity android:name="com.journeyapps.barcodescanner.CaptureActivity" -->
+        <!-- </activity> -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.carefast.detailjob.DetailJobAfterActivity" />
+        <activity android:name="com.carefast.detailjob.DetailJobjadwalActivity" />
+        <activity android:name="com.carefast.activity.RekomendasiLokerActivity" />
+        <activity
+            android:name="com.carefast.home.HomeeActivity"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.carefast.detailjob.DetailJobActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.RincianAlamat"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.ListProvince"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.ListCity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.ListKecamatan"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.ListPostal"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.TahapLimaActivity"
+            android:parentActivityName="com.carefast.register.TahapEmpatActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.TahapEmpatActivity"
+            android:parentActivityName="com.carefast.register.TahapTigaActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.TahapTigaActivity"
+            android:parentActivityName="com.carefast.register.TahapDuaActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.carefast.register.TahapDuaActivity"
+            android:parentActivityName="com.carefast.register.TahapSatuActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.register.TahapSatuActivity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.home.Homepage"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name="com.carefast.splashscreen.SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data
+                    android:host="54.251.83.205"
+                    android:pathPrefix="/carefast/"
+                    android:scheme="http" />
+                <!-- note that the leading "/" is required for pathPrefix -->
+            </intent-filter>
+        </activity>
+        <activity android:name="com.carefast.register.Deeplink">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.google.com"
+                    android:pathPrefix="/help"
+                    android:scheme="app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="com.carefast.home.Homepage">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Halo, z"
+            android:textColor="@color/defaultfont"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_username"
+            android:textSize="18sp"
+            android:maxLines="1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cari Lowongan Pekerjaan    "
+            android:layout_marginHorizontal="25dp"
+
+            android:layout_marginTop="5dp"
+            android:textColor="@color/defaultfont"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="6"
+
+            android:layout_marginHorizontal="25dp"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="0dp"
+                android:paddingStart="20dp"
+                android:id="@+id/keyword"
+                android:layout_weight="5"
+                android:fontFamily="@font/poppins"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_null"
+                android:hint="cari lowker"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+
+                    android:layout_height="50dp"
+                    android:id="@+id/btn_search"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/searchby"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:weightSum="8"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Recent Search :"
+                android:layout_gravity="center_vertical"
+
+                android:textColor="@color/defaultfont"
+
+                android:textSize="12sp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:visibility="invisible"
+                android:background="@drawable/roundwhite"
+                android:text=" "
+                android:textAlignment="center"
+                android:layout_marginHorizontal="3dp"
+                android:id="@+id/recent1"
+
+                android:textColor="@color/defaultorange"
+                android:maxLength="11"
+                android:textSize="12sp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/roundwhite"
+                android:visibility="invisible"
+                android:text=" "
+                android:textAlignment="center"
+                android:layout_marginHorizontal="3dp"
+                android:maxLength="11"
+
+
+                android:textColor="@color/defaultorange"
+                android:id="@+id/recent2"
+                android:textSize="12sp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/roundwhite"
+                android:text=""
+                android:visibility="invisible"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="3dp"
+                android:maxLength="11"
+                android:textColor="@color/defaultorange"
+                android:id="@+id/recent3"
+                android:textSize="12sp"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Rekomendasi Loker"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/defaultfont"
+
+                android:textSize="20sp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Lihat Semua"
+                android:textAlignment="textEnd"
+                android:id="@+id/seeallrekomendasi"
+                android:textColor="@color/defaultfont"
+
+                android:textSize="12sp"
+                android:maxLines="1"/>
+
+
+        </LinearLayout>
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:clipToPadding="true"
+        android:layout_marginHorizontal="25dp"
+        android:id="@+id/rv_advertisement"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Anda Belum Memiliki lowongan yang sesuai dengan kriteria anda"
+        android:layout_marginHorizontal="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        android:id="@+id/lokerkosong"/>
+</RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Jadwal Interview"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/defaultfont"
+
+                android:textSize="20sp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Lihat Semua"
+                android:textAlignment="textEnd"
+                android:id="@+id/seeallschedule"
+                android:textColor="@color/defaultfont"
+
+                android:textSize="12sp"
+                android:maxLines="1"/>
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:clipToPadding="true"
+                android:layout_marginHorizontal="25dp"
+                android:id="@+id/rv_schedule"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Belum ada jadwal Interview."
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                android:id="@+id/interviewkosong"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Status Lamaran Pekerjaan"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/defaultfont"
+
+                android:textSize="20sp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Lihat Semua"
+                android:textAlignment="textEnd"
+                android:id="@+id/seeallstatus"
+                android:textColor="@color/defaultfont"
+
+                android:textSize="12sp"
+                android:maxLines="1"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:clipToPadding="true"
+                android:layout_marginHorizontal="25dp"
+                android:id="@+id/rv_stat"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Anda belum pernah melamar pekerjaan.
+Silakan lamar pekerjaan pada Rekomendasi Loker."
+                android:layout_marginHorizontal="50dp"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                android:id="@+id/statuskosong"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

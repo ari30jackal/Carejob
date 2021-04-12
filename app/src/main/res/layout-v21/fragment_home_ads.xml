@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_dunn"
+            android:id="@id/duar"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:layout_below="@+id/duar"
+    android:id="@+id/satu"
+    android:text="Berhasil Check In!"
+    android:textColor="@color/hijaubutton"
+   android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_below="@id/satu"
+            android:id="@+id/dua"
+            android:text="Tunggu sampai nama Anda dipanggil
+oleh tim Carefast."
+            android:textAlignment="center"
+            android:textColor="@color/hijaubutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+
+        <Button
+            android:id="@+id/closeads"
+            android:layout_width="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/dua"
+            android:layout_height="30dp"
+            android:background="@color/hijaubutton"
+            android:text="Siap !"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

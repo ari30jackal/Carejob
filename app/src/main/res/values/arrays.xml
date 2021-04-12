@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="planets_array">
+        <item>1 Bulan</item>
+        <item> 2 Bulan</item>
+        <item>3 Bulan</item>
+        <item>6 Bulan</item>
+        <item>12 Bulan</item>
+    </string-array>
+
+
+    <string-array name="plncategory">
+        <item>Token Listrik</item>
+        <item>Tagihan Listrik</item>
+
+    </string-array>
+    <string-array name="riwayat">
+        <item>Transaksi</item>
+        <item>Saldo</item>
+        <item>PPOB</item>
+    </string-array>
+    <string-array name="pendidikanterakhir">
+        <item>SMA</item>
+        <item>SMK</item>
+        <item>D3</item>
+        <item>S1</item>
+
+    </string-array>
+
+    <string-array name="pengalaman">
+        <item>Belum ada pengalaman</item>
+        <item>1 Tahun</item>
+        <item>2 Tahun</item>
+        <item>lebih dari 2 Tahun</item>
+
+    </string-array>
+    <string-array name="position">
+        <item>Belum ada Pengalaman Kerja</item>
+        <item>Cleaning Service Officer</item>
+        <item>Gondola</item>
+        <item>Gardener</item>
+        <item>Team Leader</item>
+        <item>Receptionist</item>
+        <item>Supervisor</item>
+        <item>Pool Attendant</item>
+        <item>Teknisi/Handyman</item>
+        <item>Operator Telephone</item>
+        <item>Field Manager</item>
+        <item>Administration</item>
+        <item>Team Leader - Cleaning Service Officer</item>
+        <item>Team Leader - Gondola</item>
+        <item>Team Leader - Gardener</item>
+        <item>Supervisor Cleaning Service Officer</item>
+        <item>Supervisor Gardener</item>
+        <item>Chief Supervisor</item>
+        <item>Pengalaman Kerja di Bidang Lainnya</item>
+
+    </string-array>
+    <string-array name="nominal">
+        <item>20000</item>
+        <item>50000</item>
+        <item>100000</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.carefast.detailjob.DetailJobActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_backarrow" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:text="Pengalaman"
+                android:textColor="@color/defaultfont"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/whiteroundedshadow_linear">
+
+
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:background="@drawable/ic_arrowright"-->
+                <!--                    android:scaleType="center" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tekspendidikan"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/defaultfont"
+                    android:layout_marginLeft="5dp"
+                    android:text="Pendidikan Terakhir" />
+                <Spinner
+                    android:id="@+id/spinnerpendidikan"
+                    android:layout_below="@id/tekspendidikan"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/defaultfont"
+                    android:fontFamily="@font/poppins"
+                    android:autofillHints="pendidikan terakhir"
+                    android:layout_height="match_parent"
+
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Lampiran Pendidikan Terakhir"
+                android:textSize="12sp"
+                android:textColor="@color/defaultfont"
+                android:layout_marginTop="30dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:weightSum="10"
+
+                android:layout_marginTop="10dp"
+                android:background="@drawable/whiteroundedshadow_linear"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+android:visibility="invisible"
+                        android:id="@+id/camera2"
+                        android:background="@drawable/pdf"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+
+                        android:background="@drawable/pdf"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="6.7"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Ijazah"
+                        android:textColor="@color/defaultfont"
+                        android:textSize="16sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins"
+android:layout_weight="2"
+                            android:visibility="invisible"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textAlignment="textStart"
+                            android:text=" 15 mb"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins"
+                            android:layout_weight="8"
+                            android:visibility="invisible"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/hijaubutton"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:text="Submitted 27-11-20, 11:00"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="3.5">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:background="@drawable/reupload"
+        android:id="@+id/postlastedu"
+        android:layout_gravity="center"
+        android:foregroundGravity="center_vertical"/>
+</LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="20dp"
+                android:weightSum="5">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2.2"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/whiteroundedshadow_linear">
+
+                    <Spinner
+                        android:id="@+id/spinnerlastposition"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/defaultfont"
+                        android:layout_below="@+id/tekslastjob"
+                        android:layout_height="match_parent"
+
+                        />
+
+                    <!--                <ImageView-->
+                    <!--                    android:layout_width="20dp"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:background="@drawable/ic_arrowright"-->
+                    <!--                    android:scaleType="center" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tekslastjob"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/defaultfont"
+                        android:text="Pekerjaan Terakhir" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2.7"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/whiteroundedshadow_linear">
+
+                    <Spinner
+                        android:id="@+id/spinnerpengalaman"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/defaultfont"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tekstotaljob"
+
+                        />
+
+                    <!--                <ImageView-->
+                    <!--                    android:layout_width="20dp"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:background="@drawable/ic_arrowright"-->
+                    <!--                    android:scaleType="center" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/defaultfont"
+                        android:id="@+id/tekstotaljob"
+                        android:layout_marginLeft="5dp"
+                        android:text="Total Pengalaman Kerja" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Lampiran Pendukung Jabatan terakhir"
+                android:textSize="12sp"
+                android:textColor="@color/defaultfont"
+                android:layout_marginTop="30dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:weightSum="10"
+
+                android:layout_marginTop="10dp"
+                android:background="@drawable/whiteroundedshadow_linear"
+
+                >
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        android:visibility="invisible"
+                        android:id="@+id/camera"
+                        android:background="@drawable/pdf"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+
+                        android:background="@drawable/pdf"
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="6.7"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Surat Kerja"
+                        android:textColor="@color/defaultfont"
+                        android:textSize="16sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:visibility="invisible"
+                            android:textAlignment="textStart"
+                            android:text=" 15 mb"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:fontFamily="@font/poppins"
+                            android:layout_weight="8"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/hijaubutton"
+                            android:textStyle="bold"
+                            android:visibility="invisible"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:text="Submitted 27-11-20, 11:00"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="32dp"
+                        android:id="@+id/postlastjob"
+                        android:background="@drawable/reupload"
+                        android:layout_gravity="center_vertical"
+                        android:foregroundGravity="center_vertical"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="100dp"
+            android:layout_marginHorizontal="20dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Simpan"
+                android:id="@+id/btn_save"
+                android:background="@color/hijaubutton"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

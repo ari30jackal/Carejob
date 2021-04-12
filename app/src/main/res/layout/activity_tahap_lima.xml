@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/fixcarefast"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="3.2"
+                android:fontFamily="@font/poppins"
+                android:text="Lainnya"
+                android:textColor="@color/defaultfont"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/tv_page"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/poppins"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/defaultorange"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/poppins"
+                android:text="/5"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apakah di badan anda terdapat tato?"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:layout_marginTop="30dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_tato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_ya"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Ya" />
+
+                <RadioButton
+                    android:id="@+id/rb_tidak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Tidak" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apakah di badan anda terdapat tindikan?"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:fontFamily="@font/poppins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  *bagi wanita, selain tindikan pada kedua telinga"
+                android:textSize="11sp"
+                android:layout_marginTop="5dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_tindik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Ya"
+                    android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Tidak"
+                    android:textSize="14sp"/>
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apakah status perkawinan Anda?"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_kawin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_belum"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:text="Belum Kawin"
+                    android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_sudah"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Sudah Kawin" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_skck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/whiteroundedshadow_linear"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:id="@+id/skck"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/plusfile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Upload SKCK"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/shadowskck"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_camera"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="(.pdf/.jpg/.png max 10 mb)" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:textColor="@color/merah"
+                    android:text="*wajib untuk semua pelamar" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:background="@drawable/whiteroundedshadow_linear"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:id="@+id/sio"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/plusfile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Upload SIO"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/shadowsio"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_camera"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="10sp"
+                    android:text="(.pdf/.jpg/.png max 10 mb)" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="8sp"
+                    android:textColor="@color/merah"
+                    android:text="*wajib untuk pelamar jabatan gondola" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_serti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:background="@drawable/whiteroundedshadow_linear"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:id="@+id/serti"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/plusfile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Upload Sertifikat Kompetensi"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/shadowcerti"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_camera"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="(.pdf/.jpg/.png max 10 mb)" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginEnd="50dp"
+                    android:textColor="@color/merah"
+                    android:text="*wajib untuk pelamar jabatan team leader, receptionist, supervisor,
+  chief supervisor, area manager" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:background="@drawable/whiteroundedshadow_linear"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:id="@+id/sim"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/plusfile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Upload SIM"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/shadowsim"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_camera"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="(.pdf/.jpg/.png max 10 mb)" />
+
+                <TextView
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:textColor="@color/merah"
+                    android:text="*wajib untuk pelamar jabatan supervisor, chief supervisor, area manager" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bpkb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:background="@drawable/whiteroundedshadow_linear"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:id="@+id/bpkb"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/plusfile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Upload STNK"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/shadowbpkb"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_camera"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="(.pdf/.jpg/.png max 10 mb)" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:textColor="@color/merah"
+                    android:text="*wajib untuk pelamar jabatan supervisor, chief supervisor, area manager" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            >
+            <ImageView
+                android:id="@+id/btn_kembali"
+                android:background="@drawable/btnkembali"
+                android:layout_width="150dp"
+                android:layout_height="45dp"/>
+
+
+
+
+            <ImageView
+                android:id="@+id/btn_lanjutkan"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btnlanjutkan"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

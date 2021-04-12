@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.carefast.menuprofile.KelengkapanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_backarrow" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:text="Kelengkapan Lainnya"
+                android:textColor="@color/defaultfont"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
+
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:textStyle="italic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apakah di badan anda terdapat tato?"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/defaultfont"
+                        android:textSize="14sp"
+                        android:layout_marginTop="30dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_tato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:textStyle="italic"
+                            android:id="@+id/rb_ya"
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/poppins"
+                            android:layout_height="wrap_content"
+                            android:text="Ya" />
+
+                        <RadioButton
+                            android:textStyle="italic"
+                            android:id="@+id/rb_tidak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Tidak" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:textStyle="italic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apakah di badan anda terdapat tindikan?"
+
+                        android:textColor="@color/defaultfont"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginTop="5dp" />
+
+                    <TextView
+                        android:textStyle="italic"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="  *bagi wanita, selain tindikan pada kedua telinga"
+                        android:textSize="11sp"
+                        android:layout_marginTop="5dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_tindik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:textStyle="italic"
+                            android:id="@+id/rb_1k"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Ya" />
+
+                        <RadioButton
+                            android:textStyle="italic"
+                            android:id="@+id/rb_2k"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Tidak" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:textStyle="italic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/defaultfont"
+                        android:text="Apakah status perkawinan Anda?"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_kawin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:textStyle="italic"
+                            android:id="@+id/rb_belumk"
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/poppins"
+                            android:layout_height="wrap_content"
+                            android:text="Belum Kawin" />
+
+                        <RadioButton
+                            android:textStyle="italic"
+                            android:id="@+id/rb_sudahk"
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/poppins"
+                            android:layout_height="wrap_content"
+                            android:text="Sudah Kawin" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_skck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/whiteroundedshadow_linear"
+                    android:layout_marginHorizontal="20dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/pdf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:text="Upload SKCK"
+                                android:textSize="13sp" />
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/shadowskck"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/ic_camera"/>
+
+                            <Button
+                                android:padding="2dp"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@drawable/ic_baseline_refresh_24"
+                                android:background="@drawable/mybtn"
+                                android:textSize="9dp"
+                                android:textStyle="italic"
+                                android:textColor="@color/white"
+                                android:text="re-upload"
+                                android:visibility="visible"
+                                android:id="@+id/btn_skck"
+                                android:layout_marginStart="90dp"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/skck"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:id="@+id/sizeskck"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="size" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#16AA9D"
+                                android:text="🟢" />
+
+                            <TextView
+                                android:id="@+id/tanggalskck"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="tanggal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:background="@drawable/whiteroundedshadow_linear"
+                    android:layout_marginHorizontal="20dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/pdf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:text="Upload SIO"
+                                android:textSize="13sp"
+                                tools:ignore="NestedWeights" />
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/shadowsio"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/ic_camera"/>
+                            <Button
+                                android:padding="2dp"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@drawable/ic_baseline_refresh_24"
+                                android:background="@drawable/mybtn"
+                                android:textSize="9dp"
+                                android:textStyle="italic"
+                                android:textColor="@color/white"
+                                android:text="re-upload"
+                                android:visibility="visible"
+                                android:id="@+id/btn_sio"
+                                android:layout_marginStart="90dp"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/sio"
+                                />
+                        </LinearLayout>
+
+                         <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:id="@+id/sizesio"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="size" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#16AA9D"
+                                android:text="🟢" />
+
+                            <TextView
+                                android:id="@+id/tanggalsio"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="tanggal" />
+                         </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_serti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:background="@drawable/whiteroundedshadow_linear"
+                    android:layout_marginHorizontal="20dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/pdf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:text="Upload Sertifikat Kompetensi"
+                                android:textSize="13sp"
+                                tools:ignore="NestedWeights" />
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/shadowcerti"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/ic_camera"/>
+                            <Button
+                                android:padding="2dp"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@drawable/ic_baseline_refresh_24"
+                                android:background="@drawable/mybtn"
+                                android:textSize="9dp"
+                                android:textStyle="italic"
+                                android:textColor="@color/white"
+                                android:text="re-upload"
+                                android:visibility="visible"
+                                android:id="@+id/btn_serti"
+                                android:layout_marginStart="90dp"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/serti"
+                                />
+                        </LinearLayout>
+
+
+                         <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:id="@+id/sizeserti"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="size" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#16AA9D"
+                                android:text="🟢" />
+
+                            <TextView
+                                android:id="@+id/tanggalserti"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="tanggal" />
+                         </LinearLayout>
+                    </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:background="@drawable/whiteroundedshadow_linear"
+                    android:layout_marginHorizontal="20dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/pdf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:text="Upload SIM"
+                                android:textSize="13sp"
+                                tools:ignore="NestedWeights" />
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/shadowsim"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/ic_camera"/>
+                            <Button
+                                android:padding="2dp"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@drawable/ic_baseline_refresh_24"
+                                android:background="@drawable/mybtn"
+                                android:textSize="9dp"
+                                android:textStyle="italic"
+                                android:textColor="@color/white"
+                                android:text="re-upload"
+                                android:visibility="visible"
+                                android:id="@+id/btn_sim"
+                                android:layout_marginStart="90dp"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/sim"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:id="@+id/sizesim"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="size" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#16AA9D"
+                                android:text="🟢" />
+
+                            <TextView
+                                android:id="@+id/tanggalsim"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="tanggal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bpkb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:background="@drawable/whiteroundedshadow_linear"
+                    android:layout_marginHorizontal="20dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/pdf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:text="Upload BPKB"
+                                android:textSize="13sp" />
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/shadowbpkb"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/ic_camera"/>
+                            <Button
+                                android:padding="2dp"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@drawable/ic_baseline_refresh_24"
+                                android:background="@drawable/mybtn"
+                                android:textSize="9dp"
+                                android:textStyle="italic"
+                                android:textColor="@color/white"
+                                android:text="re-upload"
+                                android:visibility="visible"
+                                android:id="@+id/btn_bpkb"
+                                android:layout_marginStart="90dp"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bpkb"
+                                />
+                        </LinearLayout>
+
+                         <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:id="@+id/sizebpkb"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="size" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#16AA9D"
+                                android:text="🟢" />
+
+                            <TextView
+                                android:id="@+id/tanggalbpkb"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#16AA9D"
+                                android:text="tanggal" />
+                         </LinearLayout>
+              </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:weightSum="3">
+                    <Button
+                        android:id="@+id/cancelKelengkapan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="batal"
+                        android:background="@color/creambutton"
+                        android:textColor="@color/white"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/saveKelengkapan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Simpan"
+                        android:background="@color/hijaubutton"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
