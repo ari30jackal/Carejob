@@ -1,8 +1,7 @@
 package com.carefast.fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.media.Image;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,7 +9,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,10 +33,8 @@ import com.carefast.apihelper.UtilsApi;
 import com.carefast.contract.AppException;
 import com.carefast.contract.PrefContract;
 import com.carefast.contract.SecuredPreference;
-import com.carefast.home.HomeeActivity;
-import com.carefast.home.Homepage;
-import com.carefast.model.AdvertisementItem;
-import com.carefast.model.AdvertisementResponse;
+import com.carefast.model.AdverResponse;
+import com.carefast.model.AdvertisementItemItemItem;
 import com.carefast.model.InterviewItem;
 import com.carefast.model.ListInterviewResponse;
 import com.carefast.model.ListLamaranItem;
@@ -49,7 +48,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener  {
     RecyclerView rv_advertisement, rv_interview, rv_stat;
     RecyclerView.LayoutManager layoutManager, layoutManager2, layoutManager3;
 
@@ -62,8 +61,13 @@ public class HomeFragment extends Fragment {
     TextView tvusername, seeallrekomendasi, seeallschedule,seeallstatus;
     String firstname, user_id;
     ImageView btnsearch;
+
     EditText keyword;
+    ProgressDialog loading;
+    View alertDialogView;
+    String jopo,tato,tindik,kawin;
     TextView recent1,recent2,recent3;
+    SwipeRefreshLayout swipeRefreshLayout;
     TextView statuskosong,interviewkosong,lokerkosong;
     String temp1,temp2,temp3,temp4;
     @Override
@@ -80,6 +84,9 @@ public class HomeFragment extends Fragment {
         pref = new SecuredPreference(getActivity(), PrefContract.PREF_EL);
         rv_stat = view.findViewById(R.id.rv_stat);
         rv_stat.setHasFixedSize(true);
+        swipeRefreshLayout = view.findViewById(R.id.swipe);
+
+        swipeRefreshLayout.setOnRefreshListener(this);
         layoutManager3 = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         rv_stat.setLayoutManager(layoutManager3);
         seeallstatus = view.findViewById(R.id.seeallstatus);
@@ -92,6 +99,7 @@ public class HomeFragment extends Fragment {
         rv_advertisement.setLayoutManager(layoutManager);
         btnsearch =view.findViewById(R.id.btn_search);
         keyword = view.findViewById(R.id.keyword);
+
         recent1 = view.findViewById(R.id.recent1);
         recent2 = view.findViewById(R.id.recent2);
         recent3 = view.findViewById(R.id.recent3);
@@ -105,6 +113,34 @@ public class HomeFragment extends Fragment {
         } catch (AppException e) {
             e.printStackTrace();
         }
+
+
+
+
+
+        swipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+//                        ProgressDialog progress = new ProgressDialog(getActivity());
+//                        progress.setTitle("Loading");
+//                        progress.setMessage("Wait while loading...");
+//                        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+//                        progress.show();
+//// To dismiss the dialog
+                        getAdvertisement();
+//                        getjopo();
+                        getListInterview();getstatusLamaran();
+                        swipeRefreshLayout.setRefreshing(false);
+//
+//
+//                        progress.dismiss();
+                    }
+                }
+        );
+
+
+
 
         if (temp3.equals("")|| temp3.equals(null)){
             recent3.setVisibility(View.INVISIBLE);
@@ -170,6 +206,8 @@ public class HomeFragment extends Fragment {
         getAdvertisement();
         getstatusLamaran();
         getListInterview();
+//        getjopo();
+
     }
 
     private void recentlogic() {
@@ -272,6 +310,8 @@ public class HomeFragment extends Fragment {
                         seeallschedule.setOnClickListener(v -> {
                             Toast.makeText(getActivity(), "Tidak ada Jadwal Interview", Toast.LENGTH_SHORT).show();
                         });
+
+
                     }
                     else{
 
@@ -280,9 +320,12 @@ public class HomeFragment extends Fragment {
                             Intent intent = new Intent(getActivity(), JadwalInterviewActivity.class);
                             startActivity(intent);
                             getActivity().finish();
+
+
                         });
                     }
                 } else {
+
 
                     Toast.makeText(getActivity(), "Gagal mengambil data list interview", Toast.LENGTH_SHORT).show();
                 }
@@ -291,12 +334,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onFailure(Call<ListInterviewResponse> call, Throwable t) {
 
+
                 Toast.makeText(getActivity(), "Koneksi internet bermasalah", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void getstatusLamaran() {
+
 
         mApiService.statuslamaran(user_id).enqueue(new Callback<StatusLamaranResponse>() {
             @Override
@@ -339,39 +384,41 @@ public class HomeFragment extends Fragment {
     }
 
     private void getAdvertisement() {
-
-
-        mApiService.advertisement_get().enqueue(new Callback<AdvertisementResponse>() {
+        mApiService.getjopo(user_id).enqueue(new Callback<AdverResponse>() {
             @Override
-            public void onResponse(Call<AdvertisementResponse> call, Response<AdvertisementResponse> response) {
+            public void onResponse(Call<AdverResponse> call, Response<AdverResponse> response) {
                 if (response.isSuccessful()) {
-                    List<AdvertisementItem> advertisementItems = response.body().getAdvertisement();
-                    adapter = new AdvertisementAdapter(getActivity(), advertisementItems, genProductAdapterListener());
-                    rv_advertisement.setAdapter(adapter);
-                    adapter.notifyDataSetChanged();
-                    if (advertisementItems.size()==0)
-                    {
-                        lokerkosong.setVisibility(View.VISIBLE);
-                        seeallrekomendasi.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Toast.makeText(getActivity(), "Tidak ada Lowongan yang sesuai", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-                    else{
+                    try {
+                        List<AdvertisementItemItemItem> advertisementItems = response.body().getAdvertisement();
+                        adapter = new AdvertisementAdapter(getActivity(), advertisementItems, genProductAdapterListener());
+                        rv_advertisement.setAdapter(adapter);
+                        adapter.notifyDataSetChanged();
 
-                        lokerkosong.setVisibility(View.INVISIBLE);
-                        seeallrekomendasi.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent intent = new Intent(getActivity(), RekomendasiLokerActivity.class);
-                                startActivity(intent);
-                                getActivity().finish();
-                            }
-                        });
-                    }
+                        if (advertisementItems.size()==0)
+                        {
+                            lokerkosong.setVisibility(View.VISIBLE);
+                            seeallrekomendasi.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Toast.makeText(getActivity(), "Tidak ada Lowongan yang sesuai", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                        else{
 
+                            lokerkosong.setVisibility(View.GONE);
+                            seeallrekomendasi.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(getActivity(), RekomendasiLokerActivity.class);
+                                    startActivity(intent);
+                                    getActivity().finish();
+                                }
+                            });
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
 
                 } else {
@@ -381,21 +428,13 @@ public class HomeFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<AdvertisementResponse> call, Throwable t) {
-
-                Toast.makeText(getActivity(), "Koneksi internet bermasalah", Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<AdverResponse> call, Throwable t) {
+                Log.d("inifail",""+t.toString());
+                Toast.makeText(getActivity(), t.toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-
-    @Override
-    public void onResume() {
-getAdvertisement();
-getstatusLamaran();
-getListInterview();
-        super.onResume();
-    }
 
     private AdapterOnItemClickListener genProductAdapterListener() {
         return new AdapterOnItemClickListener() {
@@ -404,5 +443,16 @@ getListInterview();
 
             }
         };
+    }
+
+    @Override
+    public void onRefresh() {
+        swipeRefreshLayout.setRefreshing(true);
+        aksiRefresh();
+    }
+
+    private void aksiRefresh() {
+
+                swipeRefreshLayout.setRefreshing(false);
     }
 }

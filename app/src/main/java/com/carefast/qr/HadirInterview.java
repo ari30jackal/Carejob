@@ -56,6 +56,10 @@ TextView nama,kdjabatan,hariinterview,interviewer,jaminterview;
         btnHadir = findViewById(R.id.btn_masuk);
         mApiService = UtilsApi.getAPIService();
         String[] separated = hasilscan.split("=");
+//        for (int i=0; i < arrSplit.length; i++)
+//        {
+//            System.out.println(arrSplit[i]);
+//        }
         hasilscan = separated[1] = separated[1].trim();
         getdata();
 

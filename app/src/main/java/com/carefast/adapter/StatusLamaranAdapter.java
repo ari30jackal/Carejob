@@ -5,16 +5,12 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
@@ -27,21 +23,12 @@ import com.carefast.apihelper.UtilsApi;
 import com.carefast.contract.AppException;
 import com.carefast.contract.PrefContract;
 import com.carefast.contract.SecuredPreference;
-import com.carefast.detailjob.DetailJobActivity;
 import com.carefast.detailjob.DetailJobAfterActivity;
 import com.carefast.detailjob.DetailJobjadwalActivity;
-import com.carefast.model.AdvertisementItem;
-import com.carefast.model.CityItem;
 import com.carefast.model.ListLamaranItem;
-import com.carefast.model.ProvinceItem;
 import com.carefast.register.AdapterOnItemClickListener;
-import com.carefast.register.CityAdapter;
-import com.carefast.register.TahapDuaActivity;
 import com.squareup.picasso.Picasso;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

@@ -15,15 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.carefast.Login.R;
-import com.carefast.adapter.AdvertisementAdapter;
 import com.carefast.adapter.StatusLamaranAdapter;
 import com.carefast.apihelper.BaseApiService;
 import com.carefast.apihelper.UtilsApi;
 import com.carefast.contract.AppException;
 import com.carefast.contract.PrefContract;
 import com.carefast.contract.SecuredPreference;
-import com.carefast.model.AdvertisementItem;
-import com.carefast.model.AdvertisementResponse;
 import com.carefast.model.ListLamaranItem;
 import com.carefast.model.StatusLamaranResponse;
 import com.carefast.register.AdapterOnItemClickListener;

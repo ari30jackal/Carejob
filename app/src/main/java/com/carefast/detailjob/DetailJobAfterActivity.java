@@ -14,21 +14,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.carefast.Login.LoginActivity;
 import com.carefast.Login.R;
-import com.carefast.adapter.AdvertisementAdapter;
 import com.carefast.apihelper.BaseApiService;
 import com.carefast.apihelper.UtilsApi;
 import com.carefast.contract.AppException;
 import com.carefast.contract.PrefContract;
 import com.carefast.contract.SecuredPreference;
 import com.carefast.fragment.DeskripsiDetailFragment;
-import com.carefast.fragment.HomeFragment;
-import com.carefast.fragment.JobFragment;
 import com.carefast.fragment.StatusDetailFragment;
 import com.carefast.home.HomeeActivity;
-import com.carefast.model.AdvertisementItem;
-import com.carefast.model.AdvertisementResponse;
 import com.carefast.register.AdapterOnItemClickListener;
 
 import org.json.JSONArray;
@@ -36,7 +30,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;

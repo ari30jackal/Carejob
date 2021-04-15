@@ -63,4 +63,8 @@ public class PrefContract {
     public static final String recent3 = "recent3";
     public static final String keyword = "keyword";
     public static final String user_job_position = "user_job_position";
+    public static final String userhave_tatoo_applicant = "userhave_tatoo_applicant";
+    public static final String userear_piercing_applicant = "userear_piercing_applicant";
+    public static final String usermarital_status_applicant = "usermarital_status_applicant";
+
 }

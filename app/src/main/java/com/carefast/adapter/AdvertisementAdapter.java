@@ -1,22 +1,16 @@
 package com.carefast.adapter;
 
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carefast.Login.R;
@@ -26,47 +20,30 @@ import com.carefast.contract.AppException;
 import com.carefast.contract.PrefContract;
 import com.carefast.contract.SecuredPreference;
 import com.carefast.detailjob.DetailJobActivity;
-import com.carefast.detailjob.DetailJobjadwalActivity;
-import com.carefast.model.AdvertisementItem;
-import com.carefast.model.CityItem;
-import com.carefast.model.ProvinceItem;
+import com.carefast.model.AdvertisementItemItemItem;
 import com.carefast.register.AdapterOnItemClickListener;
-import com.carefast.register.CityAdapter;
-import com.carefast.register.TahapDuaActivity;
 import com.squareup.picasso.Picasso;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class AdvertisementAdapter extends RecyclerView.Adapter<AdvertisementAdapter.AssessHolder> {
-    List<AdvertisementItem> dataItemList;
+    List<AdvertisementItemItemItem> dataItemList;
     Context mContext;
     RecyclerView mRecyclerView;
     AdapterView.OnItemClickListener listener;
     private AdvertisementAdapter.OnItemClicked onClick;
     private AdapterOnItemClickListener mListener;
     BaseApiService mApiService;
-    ProgressDialog loading;
     Context context;
     SecuredPreference pref;
-    String passCek, role;
-    Date strdate;
-    Date waktudetik;
-    Date waktuuntil;
-    Date sdf3;
-    Date waktuhariini;
-    FragmentManager fragmentManager;
-    FragmentTransaction ft;
+
 
     public interface OnItemClicked {
         void onItemClick(int position);
     }
 
 
-    public AdvertisementAdapter(Context context, List<AdvertisementItem> dataItem, AdapterOnItemClickListener listener) {
+    public AdvertisementAdapter(Context context, List<AdvertisementItemItemItem> dataItem, AdapterOnItemClickListener listener) {
         this.mContext = context;
         dataItemList = dataItem;
         this.mListener = listener;
@@ -85,11 +62,11 @@ public class AdvertisementAdapter extends RecyclerView.Adapter<AdvertisementAdap
     @Override
     public void onBindViewHolder(final AdvertisementAdapter.AssessHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        final AdvertisementItem item = dataItemList.get(position);
+        final AdvertisementItemItemItem item = dataItemList.get(position);
 
         pref = new SecuredPreference(mContext, PrefContract.PREF_EL);
-holder.tvkodelowongan.setText(item.getAdvertisementcode());
-holder.tvjabatan.setText(item.getJobposition());
+holder.tvkodelowongan.setText(item.getAdvertisementCode());
+holder.tvjabatan.setText(item.getNamaPosition());
         Picasso.get()
                 .load(mContext.getResources().getString(R.string.base_url_asset_interview) +item.getIconImage())
                 .into(holder.ivicon);
@@ -103,7 +80,7 @@ holder.card.setOnClickListener(new View.OnClickListener() {
         try {
             pref.put(PrefContract.desc_advertisement,item.getJobDescription());
             pref.put(PrefContract.id_advertisement,item.getIdAdvertisement());
-            pref.put(PrefContract.position_advertisement,item.getJobposition());
+            pref.put(PrefContract.position_advertisement,item.getNamaPosition());
             pref.put(PrefContract.placement_advertisement,item.getPlacement());
         } catch (AppException e) {
             e.printStackTrace();
@@ -112,6 +89,11 @@ holder.card.setOnClickListener(new View.OnClickListener() {
     }
 });
     }
+
+//    @Override
+//    public int getItemCount() {
+//        return 0;
+//    }
 
     private void getprogres() {
     }
@@ -150,12 +132,12 @@ ivicon = itemView.findViewById(R.id.iv_icon);
         }
     }
 
-    public List<AdvertisementItem> getItems() {
+    public List<AdvertisementItemItemItem> getItems() {
         return dataItemList;
     }
 
 
-    public AdvertisementItem getItem(int position) {
+    public AdvertisementItemItemItem getItem(int position) {
         return dataItemList.get(position);
     }
 }

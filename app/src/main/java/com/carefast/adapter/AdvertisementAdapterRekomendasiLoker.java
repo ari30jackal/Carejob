@@ -23,7 +23,7 @@ import com.carefast.contract.AppException;
 import com.carefast.contract.PrefContract;
 import com.carefast.contract.SecuredPreference;
 import com.carefast.detailjob.DetailJobActivity;
-import com.carefast.model.AdvertisementItem;
+import com.carefast.model.AdvertisementItemItemItem;
 import com.carefast.register.AdapterOnItemClickListener;
 import com.squareup.picasso.Picasso;
 
@@ -31,7 +31,7 @@ import java.util.Date;
 import java.util.List;
 
 public class AdvertisementAdapterRekomendasiLoker extends RecyclerView.Adapter<AdvertisementAdapterRekomendasiLoker.AssessHolder> {
-    List<AdvertisementItem> dataItemList;
+    List<AdvertisementItemItemItem> dataItemList;
     Context mContext;
     RecyclerView mRecyclerView;
     AdapterView.OnItemClickListener listener;
@@ -55,7 +55,7 @@ public class AdvertisementAdapterRekomendasiLoker extends RecyclerView.Adapter<A
     }
 
 
-    public AdvertisementAdapterRekomendasiLoker(Context context, List<AdvertisementItem> dataItem, AdapterOnItemClickListener listener) {
+    public AdvertisementAdapterRekomendasiLoker(Context context, List<AdvertisementItemItemItem> dataItem, AdapterOnItemClickListener listener) {
         this.mContext = context;
         dataItemList = dataItem;
         this.mListener = listener;
@@ -74,15 +74,15 @@ public class AdvertisementAdapterRekomendasiLoker extends RecyclerView.Adapter<A
     @Override
     public void onBindViewHolder(final AdvertisementAdapterRekomendasiLoker.AssessHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        final AdvertisementItem item = dataItemList.get(position);
+        final AdvertisementItemItemItem item = dataItemList.get(position);
 
         if (position == 0){
 
 holder.status.setVisibility(View.VISIBLE);
         }
         pref = new SecuredPreference(mContext, PrefContract.PREF_EL);
-holder.tvkodelowongan.setText(item.getAdvertisementcode());
-holder.tvjabatan.setText(item.getJobposition());
+holder.tvkodelowongan.setText(item.getAdvertisementCode());
+holder.tvjabatan.setText(item.getIdJobPositionAdvert());
 holder.tvperiode.setText(item.getStartDate() + " - "+item.getEndDate());
 holder.tvplacement.setText(item.getPlacement());
         Picasso.get()
@@ -96,7 +96,7 @@ holder.card.setOnClickListener(new View.OnClickListener() {
         try {
             pref.put(PrefContract.desc_advertisement,item.getJobDescription());
             pref.put(PrefContract.id_advertisement,item.getIdAdvertisement());
-            pref.put(PrefContract.position_advertisement,item.getJobposition());
+            pref.put(PrefContract.position_advertisement,item.getNamaPosition());
             pref.put(PrefContract.placement_advertisement,item.getPlacement());
         } catch (AppException e) {
             e.printStackTrace();
@@ -145,12 +145,12 @@ ivicon = itemView.findViewById(R.id.iv_icon);
         }
     }
 
-    public List<AdvertisementItem> getItems() {
+    public List<AdvertisementItemItemItem> getItems() {
         return dataItemList;
     }
 
 
-    public AdvertisementItem getItem(int position) {
+    public AdvertisementItemItemItem getItem(int position) {
         return dataItemList.get(position);
     }
 }

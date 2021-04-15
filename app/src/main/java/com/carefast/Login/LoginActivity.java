@@ -108,6 +108,24 @@ public class LoginActivity extends AppCompatActivity {
                                     String gender = obj.getString("gender_applicant");
                                     String height = obj.getString("height_applicant");
                                     String weight = obj.getString("weight_applicant");
+String have_tatoo_applicant =obj.getString("have_tatoo_applicant");
+String ear_piercing_applicant = obj.getString("ear_piercing_applicant");
+String marital_status_applicant = obj.getString("marital_status_applicant");
+                                    pref.put(PrefContract.userhave_tatoo_applicant,have_tatoo_applicant);
+                                    pref.put(PrefContract.userear_piercing_applicant,ear_piercing_applicant);
+                                    pref.put(PrefContract.usermarital_status_applicant,marital_status_applicant);
+
+
+
+
+
+
+
+
+
+
+
+
                                     pref.put(PrefContract.user_last_name,lastname);
                                     pref.put(PrefContract.user_email,email);
                                     pref.put(PrefContract.user_phone,phone);

@@ -19,7 +19,7 @@ import com.carefast.contract.AppException;
 import com.carefast.contract.PrefContract;
 import com.carefast.contract.SecuredPreference;
 import com.carefast.home.HomeeActivity;
-import com.carefast.model.AdvertisementItem;
+import com.carefast.model.AdvertisementItemItemItem;
 import com.carefast.model.AdvertisementResponse;
 import com.carefast.register.AdapterOnItemClickListener;
 
@@ -72,7 +72,7 @@ public class SearchResultActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<AdvertisementResponse> call, Response<AdvertisementResponse> response) {
                 if (response.isSuccessful()) {
-                    List<AdvertisementItem> advertisementItems = response.body().getAdvertisement();
+                    List<AdvertisementItemItemItem> advertisementItems = response.body().getAdvertisement();
                     adapter = new AdvertisementAdapterRekomendasiLoker(SearchResultActivity.this, advertisementItems, genProductAdapterListener());
                     rvsearch.setAdapter(adapter);
                     adapter.notifyDataSetChanged();

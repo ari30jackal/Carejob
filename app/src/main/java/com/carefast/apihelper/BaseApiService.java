@@ -1,6 +1,7 @@
 package com.carefast.apihelper;
 
 
+import com.carefast.model.AdverResponse;
 import com.carefast.model.AdvertisementResponse;
 import com.carefast.model.CityResponse;
 import com.carefast.model.DistrictsResponse;
@@ -9,8 +10,6 @@ import com.carefast.model.ListInterviewResponse;
 import com.carefast.model.NotificationResponse;
 import com.carefast.model.PostalcodeResponse;
 import com.carefast.model.ProvResponse;
-import com.carefast.model.ResponseCity;
-import com.carefast.model.ResponseProvince;
 import com.carefast.model.StatusLamaranResponse;
 
 
@@ -21,12 +20,10 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Part;
-import retrofit2.http.Url;
 
 /**
  * Created by Teke on 01/11/2017.
@@ -39,6 +36,9 @@ public interface BaseApiService {
     Call<AdvertisementResponse>advertisement_get();
     @GET("apiari/jobposition")
     Call<JobPositionResponse>position_get();
+    @FormUrlEncoded
+    @POST("apiari/advertisementjob")
+    Call<AdvertisementResponse> advertisementjob(@Field("id_job_position") String idjob);
     @FormUrlEncoded
     @POST("apiari/city")
     Call<CityResponse> city_get(@Field("prov_id") String province_id);
@@ -59,7 +59,9 @@ public interface BaseApiService {
             @Field("email_applicant") String email_applicant
 
     );
-
+    @FormUrlEncoded
+    @POST("apiari/jopo")
+    Call<AdverResponse>getjopo(@Field("id_applicant") String id_applicant);
     @FormUrlEncoded
     @POST("api/Resetpass/forgot_password")
     Call<ResponseBody> forgetPass( @Field("email") String email);
